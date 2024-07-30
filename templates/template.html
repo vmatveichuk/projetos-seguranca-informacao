@@ -1,0 +1,24 @@
+<head>
+    <title>Projeto Segurança da Informação</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="/static/css/index.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="login">
+        <h3 class="text-center text-white pt-5">Projeto Segurança da Informação</h3>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+        {% for category, message in messages %}
+        <div class="alert alert-{{ category }}" role="alert">{{message}}</div>
+        {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        <div class="container">
+            {% block conteudo %}{% endblock %}
+        </div>
+    </div>
+</body>

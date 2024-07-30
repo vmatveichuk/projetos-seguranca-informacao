@@ -1,0 +1,6 @@
+Usuario deve ter:
+- Nome (4 caracter) e Senha (4 caracter, criptografada md5)
+
+1. Cadastros de Usuarios
+2. Autenticar usuario
+3. Criar um bot para tentar a autenticação do usuario
